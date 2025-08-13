@@ -515,7 +515,7 @@ def adapter_identification_pe(artificial_artifacts, seqtk_binary, faqcs_binary, 
 				begin_assessment = True
 		else:
 			segment = line.strip().split()
-			detected_adapters[segment[0]] = float(re.findall("\d+\.\d+", segment[3])[0])
+			detected_adapters[segment[0]] = float(re.findall(r"\d+\.\d+", segment[3])[0])
 
 	detection_report.close()
 
@@ -576,7 +576,7 @@ def adapter_identification_se(artificial_artifacts, seqtk_binary, faqcs_binary, 
 				begin_assessment = True
 		else:
 			segment = line.strip().split()
-			detected_adapters[segment[0]] = float(re.findall("\d+\.\d+", segment[3])[0])
+			detected_adapters[segment[0]] = float(re.findall(r"\d+\.\d+", segment[3])[0])
 
 	detection_report.close()
 
